@@ -546,20 +546,24 @@ video {
   border-width: 0;
 }
 
-.mt-\[11\.5rem\] {
-  margin-top: 11.5rem;
-}
-
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .h-\[4\.8rem\] {
   height: 4.8rem;
 }
 
-.h-screen {
-  height: 100vh;
+.h-\[62rem\] {
+  height: 62rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-\[46rem\] {
@@ -568,6 +572,18 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.basis-1\/4 {
+  flex-basis: 25%;
+}
+
+.basis-1\/6 {
+  flex-basis: 16.666667%;
+}
+
+.basis-3\/4 {
+  flex-basis: 75%;
 }
 
 .flex-col {
@@ -590,8 +606,48 @@ video {
   gap: 0.8rem;
 }
 
+.gap-\[4rem\] {
+  gap: 4rem;
+}
+
+.gap-\[6rem\] {
+  gap: 6rem;
+}
+
+.gap-\[8\.7rem\] {
+  gap: 8.7rem;
+}
+
 .rounded-\[0\.5rem\] {
   border-radius: 0.5rem;
+}
+
+.rounded-\[1\.2rem\] {
+  border-radius: 1.2rem;
+}
+
+.rounded-b-\[1\.2rem\] {
+  border-bottom-right-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+}
+
+.rounded-t-\[1\.2rem\] {
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+}
+
+.border-\[0\.1rem\] {
+  border-width: 0.1rem;
+}
+
+.border-\[\#4A808C\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(74 128 140 / var(--tw-border-opacity));
+}
+
+.bg-\[\#030B0D\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 11 13 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#06181C\] {
@@ -602,6 +658,11 @@ video {
 .bg-\[\#065E7C\] {
   --tw-bg-opacity: 1;
   background-color: rgb(6 94 124 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#092D38\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(9 45 56 / var(--tw-bg-opacity));
 }
 
 .bg-black {
@@ -623,9 +684,28 @@ video {
   padding-right: 3.2rem;
 }
 
+.px-\[4rem\] {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 .py-\[1\.2rem\] {
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
+}
+
+.py-\[1\.6rem\] {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+
+.py-\[11\.5rem\] {
+  padding-top: 11.5rem;
+  padding-bottom: 11.5rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .font-roboto {
@@ -639,6 +719,16 @@ video {
 
 .text-\[1\.6rem\] {
   font-size: 1.6rem;
+}
+
+.text-\[2rem\]\/\[3\.2rem\] {
+  font-size: 2rem;
+  line-height: 3.2rem;
+}
+
+.text-\[4rem\]\/\[2\.4rem\] {
+  font-size: 4rem;
+  line-height: 2.4rem;
 }
 
 .text-\[62\.5\%\] {
@@ -655,6 +745,11 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.text-\[\#4E5455\] {
+  --tw-text-opacity: 1;
+  color: rgb(78 84 85 / var(--tw-text-opacity));
 }
 
 .text-\[\#E1E1E6\] {

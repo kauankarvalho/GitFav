@@ -20,8 +20,8 @@
     <title>GitFav</title>
   </head>
 
-  <body class="flex h-screen flex-col items-center bg-black px-[16rem]">
-    <header class="mt-[11.5rem] flex h-[4.8rem] w-full justify-between">
+  <body class="flex h-full flex-col items-center gap-[8.7rem] bg-black px-[16rem] py-[11.5rem]">
+    <header class="flex h-[4.8rem] w-full justify-between">
       <img src="./src/assets/icons/logo.svg" alt="Logomarca do GitFav." />
 
       <div class="flex gap-[0.8rem]">
@@ -29,7 +29,6 @@
         <input
           class="w-[46rem] rounded-[0.5rem] bg-[#06181C] p-[1.6rem] text-[1.6rem] font-normal text-[#E1E1E6] outline-none placeholder:text-[1.6rem] placeholder:text-[#7C7C8A] focus:border-[0.2rem] focus:border-[#4A808C]"
           id="search"
-          name="search"
           type="search"
           placeholder="Digite o Github username que quer favoritar"
         />
@@ -42,5 +41,28 @@
         </button>
       </div>
     </header>
+
+    <main class="w-full">
+      <div id="table-container" class="flex flex-col rounded-[1.2rem] border-[0.1rem] border-[#4A808C]">
+        <table class="w-full text-[2rem]/[3.2rem] font-bold text-[#E1E1E6]">
+          <thead>
+            <tr class="flex gap-[4rem] rounded-t-[1.2rem] bg-[#092D38] px-[4rem] py-[1.6rem] text-left">
+              <th class="basis-3/4">Usuário</th>
+              <th class="basis-1/4">Repositories</th>
+              <th class="basis-1/4">Followers</th>
+              <th class="basis-1/6">Ação</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <div class="flex h-[62rem] items-center justify-center rounded-b-[1.2rem] bg-[#030B0D]">
+          <span class="flex items-center gap-[6rem] text-[4rem]/[2.4rem] font-bold text-[#4E5455]">
+            <img src="./src/assets/icons/big-star.svg" alt="" />
+            Nenhum favorito ainda
+          </span>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
