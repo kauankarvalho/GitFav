@@ -712,6 +712,10 @@ video {
   font-family: Roboto, sans-serif;
 }
 
+.font-robotoMono {
+  font-family: Roboto Mono, monospace;
+}
+
 .text-\[1\.4rem\]\/\[2\.4rem\] {
   font-size: 1.4rem;
   line-height: 2.4rem;
