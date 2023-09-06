@@ -20,6 +20,7 @@ class Favorites {
       this.update()
     } catch (error) {
       alert(error.message)
+      this.input.value = ""
     }
   }
 }
