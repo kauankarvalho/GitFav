@@ -3,14 +3,6 @@ import { Favorites } from "./favorites.js"
 export class FavoritesView extends Favorites {
   constructor(root) {
     super(root)
-
-    this.input = document.querySelector("#search")
-    this.button = document.querySelector("#add-favorite")
-    this.pageNoFavorites = document.querySelector("#page-no-favorites")
-
-    this.button.addEventListener("click", () => {
-      this.add(this.input.value)
-    })
   }
 
   createRow() {
@@ -33,7 +25,7 @@ export class FavoritesView extends Favorites {
     this.root.innerHTML = ""
     this.input.value = ""
 
-    if (this.entries.length === 1) {
+    if (this.entries.length >= 1) {
       this.pageNoFavorites.classList.add("hidden")
     } else if (this.entries.length === 0) {
       this.pageNoFavorites.classList.remove("hidden")
