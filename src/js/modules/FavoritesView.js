@@ -6,11 +6,8 @@ export class FavoritesView extends Favorites {
 
     this.input = document.querySelector("#search")
     this.button = document.querySelector("#add-favorite")
+    this.pageNoFavorites = document.querySelector("#page-no-favorites")
 
-    this.event()
-  }
-
-  event() {
     this.button.addEventListener("click", () => {
       this.add(this.input.value)
     })
@@ -37,11 +34,9 @@ export class FavoritesView extends Favorites {
     this.input.value = ""
 
     if (this.entries.length === 1) {
-      const noFavorites = document.querySelector("#no-favorites")
-      noFavorites.classList.add("hidden")
+      this.pageNoFavorites.classList.add("hidden")
     } else if (this.entries.length === 0) {
-      const noFavorites = document.querySelector("#no-favorites")
-      noFavorites.classList.remove("hidden")
+      this.pageNoFavorites.classList.remove("hidden")
     }
 
     this.entries.forEach((user) => {
@@ -76,14 +71,14 @@ export class FavoritesView extends Favorites {
         <th
           class="basis-1/6 text-[#F75A68]"
         >
-          <button id="remove-favorite">Remover</button>
+          <button id="remove-favorite-button">Remover</button>
         </th>
       `
 
       this.root.append(tr)
 
-      const removeButton = tr.querySelector("#remove-favorite")
-      removeButton.addEventListener("click", () => {
+      const removeFavoriteButton = tr.querySelector("#remove-favorite-button")
+      removeFavoriteButton.addEventListener("click", () => {
         this.remove(user.login)
       })
     })
