@@ -3,7 +3,7 @@ import { GithubUserAPI } from "./githubUserAPI.js"
 export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
-    
+
     this.input = document.querySelector("#search")
     this.button = document.querySelector("#add-favorite")
     this.pageNoFavorites = document.querySelector("#page-no-favorites")
@@ -25,12 +25,14 @@ export class Favorites {
 
   async add(username) {
     try {
-      const user = await GithubUserAPI.search(username)
+      const userExists = this.entries.find((user) => user.login === username)
+      if (userExists) {
+        throw new Error("🟨 Usuário já adicionado!")
+      }
 
+      const user = await GithubUserAPI.search(username)
       if (user.login === undefined) {
         throw new Error("🟥 Usuário não encontrado!")
-      } else if (this.entries.some((entry) => entry.login === user.login)) {
-        throw new Error("🟨 Usuário já adicionado!")
       }
 
       this.entries = [user, ...this.entries]
