@@ -23,6 +23,14 @@ class Favorites {
       this.input.value = ""
     }
   }
+
+  remove(username) {
+    const isOk = confirm("🟨 Deseja remover este usuário dos favoritos?")
+    if (isOk) {
+      this.entries = this.entries.filter((user) => user.login !== username)
+      this.update()
+    }
+  }
 }
 
 export class FavoritesView extends Favorites {
@@ -64,11 +72,14 @@ export class FavoritesView extends Favorites {
     if (this.entries.length === 1) {
       const noFavorites = document.querySelector("#no-favorites")
       noFavorites.classList.add("hidden")
+    } else if (this.entries.length === 0) {
+      const noFavorites = document.querySelector("#no-favorites")
+      noFavorites.classList.remove("hidden")
     }
 
     this.entries.forEach((user) => {
       const tr = this.createRow()
-      
+
       if (user.name === null) {
         user.name = "Usuário sem nome"
       }
@@ -101,7 +112,13 @@ export class FavoritesView extends Favorites {
           <button id="remove-favorite">Remover</button>
         </th>
       `
+
       this.root.append(tr)
+
+      const removeButton = tr.querySelector("#remove-favorite")
+      removeButton.addEventListener("click", () => {
+        this.remove(user.login)
+      })
     })
   }
 }
