@@ -68,6 +68,11 @@ export class FavoritesView extends Favorites {
 
     this.entries.forEach((user) => {
       const tr = this.createRow()
+      
+      if (user.name === null) {
+        user.name = "Usuário sem nome"
+      }
+
       tr.innerHTML = `
         <th class="flex basis-3/4 items-center gap-[1.8rem]">
           <img
