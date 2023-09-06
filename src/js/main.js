@@ -1,1 +1,1 @@
-import "./modules/GithubFavorites/index.js"
+import "./modules/index.js"
