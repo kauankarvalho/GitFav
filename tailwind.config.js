@@ -11,9 +11,10 @@ module.exports = {
     "odd:bg-[rgba(6,_22,_27,_0.5)]",
     "even:bg-[#06181C]",
     "even:bg-[#06181C]",
+    "max-w-min",
     "hidden",
   ],
-  
+
   theme: {
     fontFamily: {
       roboto: ["Roboto", "sans-serif"],

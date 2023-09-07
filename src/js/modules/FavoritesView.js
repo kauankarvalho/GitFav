@@ -48,7 +48,7 @@ export class FavoritesView extends Favorites {
           <div class="flex flex-col">
             <span>${user.name}</span>
             <a
-              class="font-normal"
+              class="font-normal max-w-min"
               href="${user.html_url}"
               target="_blank"
             >

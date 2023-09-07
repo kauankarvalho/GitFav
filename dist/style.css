@@ -586,6 +586,11 @@ video {
   width: 100%;
 }
 
+.max-w-min {
+  max-width: -moz-min-content;
+  max-width: min-content;
+}
+
 .basis-1\/4 {
   flex-basis: 25%;
 }
