@@ -27,7 +27,9 @@ export class Favorites {
   async add(username) {
     try {
       const userExists = this.entries.find((user) => user.login === username)
-      if (userExists) {
+      if (username === "") {
+        throw new Error("🟥 Digite um usuário!")
+      } else if (userExists) {
         throw new Error("🟨 Usuário já adicionado!")
       }
 
