@@ -1,3 +1,4 @@
+import { toggleButtonAttributesAndClass } from "../utils.js"
 import { GithubUserAPI } from "./githubUserAPI.js"
 
 export class Favorites {
@@ -30,12 +31,18 @@ export class Favorites {
         throw new Error("🟨 Usuário já adicionado!")
       }
 
+      toggleButtonAttributesAndClass(this.button)
+
       const user = await GithubUserAPI.search(username)
       if (user.login === undefined) {
+        toggleButtonAttributesAndClass(this.button)
         throw new Error("🟥 Usuário não encontrado!")
       }
 
+      toggleButtonAttributesAndClass(this.button)
+
       this.entries = [user, ...this.entries]
+
       this.update()
       this.save()
     } catch (error) {

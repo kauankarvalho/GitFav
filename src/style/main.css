@@ -5,3 +5,8 @@
 input[type="search"]::-webkit-search-cancel-button {
   display: none;
 }
+
+:disabled {
+  cursor: no-drop;
+  opacity: 0.5;
+}

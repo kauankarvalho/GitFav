@@ -810,6 +810,11 @@ input[type="search"]::-webkit-search-cancel-button {
   display: none;
 }
 
+:disabled {
+  cursor: no-drop;
+  opacity: 0.5;
+}
+
 .placeholder\:text-\[1\.6rem\]::-moz-placeholder {
   font-size: 1.6rem;
 }
@@ -842,16 +847,6 @@ input[type="search"]::-webkit-search-cancel-button {
   background-color: rgb(6 24 28 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-white:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.hover\:text-\[\#065E7C\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(6 94 124 / var(--tw-text-opacity));
-}
-
 .focus\:border-\[0\.2rem\]:focus {
   border-width: 0.2rem;
 }
@@ -859,6 +854,16 @@ input[type="search"]::-webkit-search-cancel-button {
 .focus\:border-\[\#4A808C\]:focus {
   --tw-border-opacity: 1;
   border-color: rgb(74 128 140 / var(--tw-border-opacity));
+}
+
+.enabled\:hover\:bg-white:hover:enabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.enabled\:hover\:text-\[\#065E7C\]:hover:enabled {
+  --tw-text-opacity: 1;
+  color: rgb(6 94 124 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:fill-\[\#065E7C\] {
