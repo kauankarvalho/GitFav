@@ -14,9 +14,18 @@ export class Favorites {
 
   load() {
     this.entries = JSON.parse(localStorage.getItem("@github-favorites:")) || []
+
+    this.input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        this.add(this.input.value)
+        this.input.blur()
+      }
+    })
+
     this.button.addEventListener("click", () => {
       this.add(this.input.value)
     })
+
     this.update()
   }
 
