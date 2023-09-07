@@ -852,6 +852,10 @@ input[type="search"]::-webkit-search-cancel-button {
   background-color: rgb(6 24 28 / var(--tw-bg-opacity));
 }
 
+.hover\:opacity-50:hover {
+  opacity: 0.5;
+}
+
 .focus\:border-\[0\.2rem\]:focus {
   border-width: 0.2rem;
 }

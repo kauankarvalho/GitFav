@@ -48,7 +48,7 @@ export class FavoritesView extends Favorites {
           <div class="flex flex-col">
             <span>${user.name}</span>
             <a
-              class="font-normal max-w-min"
+              class="max-w-min font-normal transition-all duration-[0.2s] hover:opacity-50"
               href="${user.html_url}"
               target="_blank"
             >
@@ -63,7 +63,11 @@ export class FavoritesView extends Favorites {
         <th
           class="basis-1/6 text-[#F75A68]"
         >
-          <button id="remove-favorite-button">Remover</button>
+          <button 
+            class="transition-all duration-[0.2s] hover:opacity-50" id="remove-favorite-button"
+          >
+            Remover
+          </button>
         </th>
       `
 
