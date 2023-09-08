@@ -23,7 +23,7 @@ export class FavoritesView extends Favorites {
 
   update() {
     this.root.innerHTML = ""
-    this.input.value = ""
+    this.searchInput.value = ""
 
     if (this.entries.length >= 1) {
       this.pageNoFavorites.classList.add("hidden")

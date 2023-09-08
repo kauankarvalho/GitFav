@@ -5,8 +5,8 @@ export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
 
-    this.input = document.querySelector("#search")
-    this.button = document.querySelector("#add-favorite")
+    this.searchInput = document.querySelector("#search")
+    this.addFavoriteButton = document.querySelector("#add-favorite-button")
     this.pageNoFavorites = document.querySelector("#page-no-favorites")
 
     this.load()
@@ -15,15 +15,15 @@ export class Favorites {
   load() {
     this.entries = JSON.parse(localStorage.getItem("@github-favorites:")) || []
 
-    this.input.addEventListener("keydown", (event) => {
+    this.searchInput.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
-        this.add(this.input.value)
-        this.input.blur()
+        this.add(this.searchInput.value)
+        this.searchInput.blur()
       }
     })
 
-    this.button.addEventListener("click", () => {
-      this.add(this.input.value)
+    this.addFavoriteButton.addEventListener("click", () => {
+      this.add(this.searchInput.value)
     })
 
     this.update()
@@ -42,15 +42,15 @@ export class Favorites {
         throw new Error("🟨 Usuário já adicionado!")
       }
 
-      toggleButtonAttributesAndClass(this.button)
+      toggleButtonAttributesAndClass(this.addFavoriteButton)
 
       const user = await GithubUserAPI.search(username)
       if (user.login === undefined) {
-        toggleButtonAttributesAndClass(this.button)
+        toggleButtonAttributesAndClass(this.addFavoriteButton)
         throw new Error("🟥 Usuário não encontrado!")
       }
 
-      toggleButtonAttributesAndClass(this.button)
+      toggleButtonAttributesAndClass(this.addFavoriteButton)
 
       this.entries = [user, ...this.entries]
 
@@ -58,7 +58,7 @@ export class Favorites {
       this.save()
     } catch (error) {
       alert(error.message)
-      this.input.value = ""
+      this.searchInput.value = ""
     }
   }
 
