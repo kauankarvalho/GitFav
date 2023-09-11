@@ -865,11 +865,6 @@ input[type="search"]::-webkit-search-cancel-button {
   color: rgb(124 124 138 / var(--tw-text-opacity));
 }
 
-.last\:rounded-b-\[1\.2rem\]:last-child {
-  border-bottom-right-radius: 1.2rem;
-  border-bottom-left-radius: 1.2rem;
-}
-
 .odd\:bg-\[rgba\(6\2c _22\2c _27\2c _0\.5\)\]:nth-child(odd) {
   background-color: rgba(6, 22, 27, 0.5);
 }

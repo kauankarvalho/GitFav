@@ -9,7 +9,6 @@ module.exports = {
     "rounded-full",
     "text-[#F75A68]",
     "hover:opacity-50",
-    "last:rounded-b-[1.2rem]",
     "odd:bg-[rgba(6,_22,_27,_0.5)]",
     "even:bg-[#06181C]",
     "even:bg-[#06181C]",

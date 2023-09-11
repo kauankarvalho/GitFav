@@ -14,7 +14,6 @@ export class FavoritesView extends Favorites {
       "px-[4rem]",
       "py-[1.6rem]",
       "text-left",
-      "last:rounded-b-[1.2rem]",
       "odd:bg-[rgba(6,_22,_27,_0.5)]",
       "even:bg-[#06181C]",
     )
