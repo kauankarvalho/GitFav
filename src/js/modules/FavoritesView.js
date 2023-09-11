@@ -11,9 +11,12 @@ export class FavoritesView extends Favorites {
       "flex",
       "items-center",
       "gap-[4rem]",
+      "border-b-[0.1rem]",
+      "border-[#4A808C]",
       "px-[4rem]",
       "py-[1.6rem]",
       "text-left",
+      "last:border-none",
       "odd:bg-[rgba(6,_22,_27,_0.5)]",
       "even:bg-[#06181C]",
     )

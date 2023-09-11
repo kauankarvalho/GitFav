@@ -677,6 +677,10 @@ video {
   border-width: 0.1rem;
 }
 
+.border-b-\[0\.1rem\] {
+  border-bottom-width: 0.1rem;
+}
+
 .border-\[\#4A808C\] {
   --tw-border-opacity: 1;
   border-color: rgb(74 128 140 / var(--tw-border-opacity));
@@ -863,6 +867,10 @@ input[type="search"]::-webkit-search-cancel-button {
 .placeholder\:text-\[\#7C7C8A\]::placeholder {
   --tw-text-opacity: 1;
   color: rgb(124 124 138 / var(--tw-text-opacity));
+}
+
+.last\:border-none:last-child {
+  border-style: none;
 }
 
 .odd\:bg-\[rgba\(6\2c _22\2c _27\2c _0\.5\)\]:nth-child(odd) {
