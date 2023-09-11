@@ -18,7 +18,6 @@ export class Favorites {
     this.searchInput.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
         this.add(this.searchInput.value)
-        this.searchInput.blur()
       }
     })
 
