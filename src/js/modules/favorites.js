@@ -1,5 +1,5 @@
 import { toggleButtonAttributesAndClass } from "../utils.js"
-import { GithubUserAPI } from "./githubUserAPI.js"
+import { GithubUserAPI } from "./github-user-api.js"
 
 export class Favorites {
   constructor(root) {
