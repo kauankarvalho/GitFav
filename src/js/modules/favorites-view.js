@@ -41,7 +41,7 @@ export class FavoritesView extends Favorites {
       }
 
       tr.innerHTML = `
-        <th 
+        <td
           class="flex basis-3/5 items-center gap-[1.8rem] max-[700px]:basis-full"
         >
           <img 
@@ -59,12 +59,12 @@ export class FavoritesView extends Favorites {
               ${user.login}
             </a>
           </div>
-      </th>
+      </td>
 
-      <th class="basis-1/4 max-[700px]:hidden">${user.public_repos}</th>
-      <th class="basis-1/4 max-[950px]:hidden">${user.followers}</th>
+      <td class="basis-1/4 max-[700px]:hidden">${user.public_repos}</td>
+      <td class="basis-1/4 max-[950px]:hidden">${user.followers}</td>
 
-      <th
+      <td
         class="basis-1/6 text-[#F75A68] max-[950px]:basis-[11%] max-[700px]:min-w-[4.8rem] max-[700px]:basis-0"
       >
         <button
@@ -79,7 +79,7 @@ export class FavoritesView extends Favorites {
             alt="Ícone de uma lixeira."
           />
         </button>
-      </th>
+      </td>
       `
 
       this.root.append(tr)
