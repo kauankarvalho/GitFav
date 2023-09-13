@@ -41,11 +41,13 @@ export class FavoritesView extends Favorites {
       }
 
       tr.innerHTML = `
-        <th class="flex basis-3/4 items-center gap-[1.8rem]">
-          <img
-            class="h-[5.6rem] w-[5.6rem] rounded-full"
-            src="${user.avatar_url}"
-            alt="Imagem de ${user.name}"
+        <th 
+          class="flex basis-3/5 items-center gap-[1.8rem] max-[700px]:basis-full"
+        >
+          <img 
+            class="h-[5.6rem] w-[5.6rem] rounded-full" 
+            src="${user.avatar_url}" 
+            alt="Imagem de ${user.name}" 
           />
           <div class="flex flex-col">
             <span>${user.name}</span>
@@ -57,20 +59,27 @@ export class FavoritesView extends Favorites {
               ${user.login}
             </a>
           </div>
-        </th>
+      </th>
 
-        <th class="basis-1/4">${user.public_repos}</th>
-        <th class="basis-1/4">${user.followers}</th>
+      <th class="basis-1/4 max-[700px]:hidden">${user.public_repos}</th>
+      <th class="basis-1/4 max-[950px]:hidden">${user.followers}</th>
 
-        <th
-          class="basis-1/6 text-[#F75A68]"
+      <th
+        class="basis-1/6 text-[#F75A68] max-[950px]:basis-[11%] max-[700px]:min-w-[4.8rem] max-[700px]:basis-0"
+      >
+        <button
+          id="remove-favorite-button"
+          class="flex items-center transition-all duration-[0.2s] hover:opacity-50"
         >
-          <button 
-            class="transition-all duration-[0.2s] hover:opacity-50" id="remove-favorite-button"
-          >
-            Remover
-          </button>
-        </th>
+          <span class="max-[985px]:hidden">Remover</span>
+          
+          <img
+            class="hidden h-[2.5rem] w-[2.5rem] max-[985px]:block"
+            src="./src/assets/icons/trash.svg"
+            alt="Ícone de uma lixeira."
+          />
+        </button>
+      </th>
       `
 
       this.root.append(tr)

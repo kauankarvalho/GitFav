@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br" class="font-roboto text-[62.5%]">
+<html lang="pt-br" class="font-roboto text-[62.5%] max-[500px]:text-[50%]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,22 +23,28 @@
     <title>GitFav</title>
   </head>
 
-  <body class="flex h-full flex-col items-center gap-[8.7rem] bg-black px-[16rem] py-[11.5rem]">
-    <header class="flex h-[4.8rem] w-full justify-between">
-      <img src="./src/assets/icons/logo.svg" alt="Logomarca do GitFav." />
+  <body
+    class="flex h-full flex-col items-center gap-[8.7rem] bg-black px-[16rem] py-[11.5rem] max-[1180px]:px-[8rem] max-[900px]:px-[4rem]"
+  >
+    <header class="flex w-full justify-between max-[820px]:flex-col max-[820px]:items-center max-[820px]:gap-[3.5rem]">
+      <img
+        class="mr-[15rem] h-[4.8rem] w-[18.7rem] max-[820px]:m-0"
+        src="./src/assets/icons/logo.svg"
+        alt="Logomarca do GitFav."
+      />
 
-      <div class="flex gap-[0.8rem]">
+      <div class="flex w-full max-w-[63.6rem] items-center gap-[0.8rem] max-[400px]:flex-col">
         <label for="search" class="sr-only">Digite o Github username que quer favoritar</label>
         <input
-          class="w-[46rem] rounded-[0.5rem] bg-[#06181C] p-[1.6rem] text-[1.6rem] font-normal text-[#E1E1E6] outline-none placeholder:text-[1.6rem] placeholder:text-[#7C7C8A] focus:border-[0.2rem] focus:border-[#4A808C]"
+          class="h-[4.8rem] w-full rounded-[0.5rem] bg-[#06181C] p-[1.6rem] text-[1.6rem] font-normal text-[#E1E1E6] outline-none placeholder:text-[1.6rem] placeholder:text-[#7C7C8A] focus:border-[0.2rem] focus:border-[#4A808C] max-[400px]:text-center"
           id="search"
           type="search"
-          placeholder="Digite o Github username que quer favoritar"
+          placeholder="Digite o username do GitHub"
         />
 
         <button
           id="add-favorite-button"
-          class="group flex items-center justify-center gap-[0.8rem] rounded-[0.5rem] bg-[#065E7C] px-[3.2rem] py-[1.2rem] text-[1.4rem]/[2.4rem] font-bold uppercase text-white transition-all duration-[0.2s] enabled:hover:bg-white enabled:hover:text-[#065E7C]"
+          class="group flex items-center justify-center gap-[0.8rem] rounded-[0.5rem] bg-[#065E7C] px-[3.2rem] py-[1.2rem] text-[1.4rem]/[2.4rem] font-bold uppercase text-white transition-all duration-[0.2s] enabled:hover:bg-white enabled:hover:text-[#065E7C] max-[400px]:max-w-min"
         >
           <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -60,22 +66,27 @@
         <table class="w-full text-[2rem]/[3.2rem] font-bold text-[#E1E1E6]">
           <thead>
             <tr class="flex gap-[4rem] rounded-t-[1.2rem] bg-[#092D38] px-[4rem] py-[1.6rem] text-left">
-              <th class="basis-3/4">Usuário</th>
-              <th class="basis-1/4">Repositories</th>
-              <th class="basis-1/4">Followers</th>
-              <th class="basis-1/6">Ação</th>
+              <th class="basis-3/5 max-[700px]:basis-full">Usuário</th>
+              <th class="basis-1/4 max-[700px]:hidden">Repositórios</th>
+              <th class="basis-1/4 max-[950px]:hidden">Seguidores</th>
+              <th class="basis-1/6 max-[950px]:basis-[11%] max-[700px]:min-w-[4.8rem] max-[700px]:basis-0">Ação</th>
             </tr>
           </thead>
 
-          <tbody class="scrollbar block max-h-[48.9rem] overflow-y-auto rounded-b-[1.2rem]"></tbody>
+          <tbody class="scrollbar block max-h-[49.3rem] overflow-y-auto rounded-b-[1.2rem]"></tbody>
         </table>
 
         <div
           id="page-no-favorites"
-          class="flex h-[48.9rem] items-center justify-center rounded-b-[1.2rem] bg-[#030B0D]"
+          class="flex h-[49.3rem] items-center justify-center gap-[6rem] rounded-b-[1.2rem] bg-[#030B0D] px-[5rem] max-[720px]:flex-col max-[720px]:gap-[3.2rem]"
         >
-          <span class="flex items-center gap-[6rem] font-robotoMono text-[4rem]/[2.4rem] font-bold text-[#4E5455]">
-            <img src="./src/assets/icons/big-star.svg" alt="Desenho de uma grande estrela com o rosto assustado." />
+          <img
+            class="h-[13.2rem] w-[12.5rem]"
+            src="./src/assets/icons/big-star.svg"
+            alt="Desenho de uma grande estrela com o rosto assustado."
+          />
+
+          <span class="text-center font-robotoMono text-[4rem]/[4rem] font-bold text-[#4E5455]">
             Nenhum favorito ainda
           </span>
         </div>
